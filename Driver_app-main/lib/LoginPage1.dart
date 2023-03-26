@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_const
+// ignore_for_file: unnecessary_const, avoid_print
 
 import 'dart:ui';
 import 'package:firebase_messaging/firebase_messaging.dart';
