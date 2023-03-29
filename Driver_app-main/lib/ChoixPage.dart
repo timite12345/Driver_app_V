@@ -1,3 +1,4 @@
+import 'package:driver_app/MenuPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -25,20 +26,11 @@ class _ChoixPageState extends State<ChoixPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text('Menu'),
+        backgroundColor: Colors.green[300],
         elevation: 0,
-        automaticallyImplyLeading: true,
-        backgroundColor: Colors.white.withOpacity(0),
-        centerTitle: true,
-        title: Container(
-          margin: const EdgeInsets.only(top: 20),
-          child: Text("Que voulez-vous faire ?",
-              style: GoogleFonts.ubuntu(
-                color: Colors.blueGrey,
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              )),
-        ),
       ),
+      backgroundColor: Colors.green[100],
       body: Container(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -124,8 +116,8 @@ class _ChoixPageState extends State<ChoixPage> {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SocialPage()));
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Menu()));
                 },
                 child: Container(
                   decoration: BoxDecoration(

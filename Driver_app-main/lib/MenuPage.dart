@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+
+class Menu extends StatefulWidget {
+  const Menu({super.key});
+
+  @override
+  State<Menu> createState() => _MenuState();
+}
+
+class _MenuState extends State<Menu> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Menu'),
+        backgroundColor: Colors.green,
+        elevation: 0,
+      ),
+      backgroundColor: Colors.green[100],
+    );
+  }
+}
