@@ -32,8 +32,9 @@ class _ChoixPageState extends State<ChoixPage> {
       ),
       backgroundColor: Colors.green[100],
       body: Container(
+        padding: EdgeInsets.symmetric(vertical: 80),
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(20.0),
           child: GridView(
             children: [
               InkWell(
