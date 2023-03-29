@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -19,14 +21,14 @@ class _DelayedAnimationState extends State<DelayedAnimation>
   @override
   void initState() {
     super.initState();
-    _controller =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 500));
+    _controller = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 500));
     final curve = CurvedAnimation(
       parent: _controller,
       curve: Curves.decelerate,
     );
     animOffset = Tween<Offset>(
-      begin: Offset(0.0, 0.5),
+      begin: const Offset(0.0, 0.5),
       end: Offset.zero,
     ).animate(curve);
 
