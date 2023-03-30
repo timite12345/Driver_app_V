@@ -1,10 +1,13 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 class CustomCard extends StatelessWidget {
   const CustomCard({
-    required String titre,
-  });
+    Key? key,
+    required this.titre,
+  }) : super(key: key);
 
+  final String titre;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,12 +22,12 @@ class CustomCard extends StatelessWidget {
       //     )),
       child: TextButton(
         onPressed: () {},
-        child: const ListTile(
+        child: ListTile(
           leading: CircleAvatar(
             radius: 25,
           ),
           title: Text(
-            'Cocody-Plateau',
+            titre,
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
           ),
           subtitle: Text(
