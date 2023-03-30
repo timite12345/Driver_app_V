@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CustomCard extends StatelessWidget {
-  const CustomCard({super.key});
+  const CustomCard({
+    required String titre,
+  });
 
   @override
   Widget build(BuildContext context) {

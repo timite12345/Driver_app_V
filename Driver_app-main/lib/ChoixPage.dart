@@ -45,7 +45,7 @@ class _ChoixPageState extends State<ChoixPage> {
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Colors.red,
+                    color: Colors.white,
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -53,11 +53,14 @@ class _ChoixPageState extends State<ChoixPage> {
                       Icon(
                         Icons.home,
                         size: 50,
-                        color: Colors.white,
+                        color: Colors.black,
                       ),
                       Text(
                         "Home",
-                        style: TextStyle(color: Colors.white, fontSize: 30),
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold),
                       )
                     ],
                   ),

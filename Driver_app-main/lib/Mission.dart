@@ -52,15 +52,33 @@ class _MissionState extends State<Mission> {
                     topRight: Radius.circular(30),
                   )),
               child: ListView(children: const [
-                CustomCard(),
-                CustomCard(),
-                CustomCard(),
-                CustomCard(),
-                CustomCard(),
-                CustomCard(),
-                CustomCard(),
-                CustomCard(),
-                CustomCard(),
+                CustomCard(
+                  titre: 'Cocody-plateau',
+                ),
+                CustomCard(
+                  titre: 'Marcory-Cocody',
+                ),
+                CustomCard(
+                  titre: 'Yopougon-Cocody',
+                ),
+                CustomCard(
+                  titre: 'Angre-Plateau',
+                ),
+                CustomCard(
+                  titre: 'Abobo-Angre',
+                ),
+                CustomCard(
+                  titre: 'Adjame-Cocody',
+                ),
+                CustomCard(
+                  titre: 'Bingerville-Deux Plateaux',
+                ),
+                CustomCard(
+                  titre: 'Port-Bouet-Koumassi',
+                ),
+                CustomCard(
+                  titre: 'Marcory-Treichville',
+                ),
               ]),
             ),
           ),
@@ -69,4 +87,3 @@ class _MissionState extends State<Mission> {
     );
   }
 }
- 
