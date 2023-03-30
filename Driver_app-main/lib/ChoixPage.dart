@@ -31,6 +31,10 @@ class _ChoixPageState extends State<ChoixPage> {
         elevation: 0,
       ),
       backgroundColor: Colors.green[100],
+      //Commence ici les trois traits sur la nav Bar
+      drawer: Drawer(
+        child: ListView(children: [ListTile()]),
+      ),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 80),
         child: Padding(
