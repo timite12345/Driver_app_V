@@ -103,13 +103,13 @@ class FirstScreen extends StatefulWidget {
 }
 
 class _FirstScreenState extends State<FirstScreen> {
-  final String apiUrl = "http://192.168.1.134:8000/api/chauffeur";
+  final String apiUrl = "http://192.168.1.134:8000/api/mission";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Mission'),
+          title: const Text('Missions'),
         ),
         body: TextButton(
           onPressed: () {
@@ -139,11 +139,11 @@ class _FirstScreenState extends State<FirstScreen> {
                             children: [
                               Text(users[index].nom),
                               Text(users[index].prenom),
-                              Text(users[index].tel),
                               Text(users[index].email),
-                              Text(users[index].adresse),
-                              Text(users[index].permis),
-                              Text(users[index].estDisponible),
+                              Text(users[index].estUrgent),
+                              Text(users[index].date_Dep),
+                              Text(users[index].adresse_Dep),
+                              Text(users[index].condTransp),
                               Text(users[index].create_at),
                               Text(users[index].update_at),
                             ],

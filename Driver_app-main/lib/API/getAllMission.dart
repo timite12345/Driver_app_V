@@ -7,11 +7,11 @@ class Mission {
   String id;
   String nom;
   String prenom;
-  String tel;
   String email;
-  String adresse;
-  String permis;
-  String estDisponible;
+  String estUrgent;
+  String date_Dep;
+  String adresse_Dep;
+  String condTransp;
   String create_at;
   String update_at;
 
@@ -19,11 +19,11 @@ class Mission {
     required this.id,
     required this.nom,
     required this.prenom,
-    required this.tel,
     required this.email,
-    required this.adresse,
-    required this.permis,
-    required this.estDisponible,
+    required this.estUrgent,
+    required this.date_Dep,
+    required this.adresse_Dep,
+    required this.condTransp,
     required this.create_at,
     required this.update_at,
   });
@@ -33,18 +33,18 @@ class Mission {
       id: json['id'].toString(),
       nom: json['nom'].toString(),
       prenom: json['prenom'].toString(),
-      tel: json['tel'].toString(),
       email: json['email'].toString(),
-      adresse: json['adresse'].toString(),
-      permis: json['permis'].toString(),
-      estDisponible: json['estDisponible'].toString(),
+      estUrgent: json['estUrgent'].toString(),
+      date_Dep: json['date_Dep'].toString(),
+      adresse_Dep: json['adresse_Dep'].toString(),
+      condTransp: json['condTransp'].toString(),
       create_at: json['create_at'].toString(),
       update_at: json['update_at'].toString(),
     );
   }
 }
 
-final String apiUrl = "http://192.168.1.134:8000/api/chauffeur";
+final String apiUrl = "http://192.168.1.134:8000/api/mission";
 
 Future<List<Mission>> getAllMission() async {
   final response = await http.get(Uri.parse(apiUrl));
