@@ -103,7 +103,7 @@ class FirstScreen extends StatefulWidget {
 }
 
 class _FirstScreenState extends State<FirstScreen> {
-  final String apiUrl = "http://192.168.1.134:8000/api/mission";
+  //final String apiUrl = "http://192.168.1.134:8000/api/mission";
 
   @override
   Widget build(BuildContext context) {
