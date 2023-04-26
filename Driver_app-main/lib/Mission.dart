@@ -1,94 +1,3 @@
-// import 'package:driver_app/CustomCards.dart';
-// import 'package:flutter/material.dart';
-
-// import 'CategorySelector.dart';
-// import 'CustomCard.dart';
-
-// class Mission extends StatefulWidget {
-//   const Mission({super.key});
-
-//   @override
-//   State<Mission> createState() => _MissionState();
-// }
-
-// class _MissionState extends State<Mission> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       backgroundColor: Theme.of(context).primaryColor,
-//       appBar: AppBar(
-//         leading: IconButton(
-//           icon: const Icon(Icons.menu),
-//           iconSize: 30.0,
-//           color: Colors.white,
-//           onPressed: () {},
-//         ),
-//         title: const Text(
-//           'Mission',
-//           style: TextStyle(
-//             fontSize: 28.0,
-//             fontWeight: FontWeight.bold,
-//           ),
-//         ),
-//         elevation: 0.0,
-//         actions: <Widget>[
-//           IconButton(
-//             icon: Icon(Icons.search),
-//             iconSize: 30.0,
-//             color: Colors.white,
-//             onPressed: () {},
-//           ),
-//         ],
-//       ),
-//       body: Column(
-//         children: [
-//           const CategorySelector(), //Cette classe permet de scroller la barre de navigation d'en haut
-//           Expanded(
-//             child: Container(
-//               //height: 500,
-//               decoration: const BoxDecoration(
-//                   color: Colors.white,
-//                   borderRadius: BorderRadius.only(
-//                     topLeft: Radius.circular(30),
-//                     topRight: Radius.circular(30),
-//                   )),
-//               child: ListView(children: const [
-//                 CustomCard(
-//                   titre: 'Cocody-plateau',
-//                 ),
-//                 // CustomCard(
-//                 //   titre: 'Marcory-Cocody',
-//                 // ),
-//                 // CustomCard(
-//                 //   titre: 'Yopougon-Cocody',
-//                 // ),
-//                 // CustomCard(
-//                 //   titre: 'Angre-Plateau',
-//                 // ),
-//                 // CustomCard(
-//                 //   titre: 'Abobo-Angre',
-//                 // ),
-//                 // CustomCard(
-//                 //   titre: 'Adjame-Cocody',
-//                 // ),
-//                 // CustomCard(
-//                 //   titre: 'Bingerville-Deux Plateaux',
-//                 // ),
-//                 // CustomCard(
-//                 //   titre: 'Port-Bouet-Koumassi',
-//                 // ),
-//                 // CustomCard(
-//                 //   titre: 'Marcory-Treichville',
-//                 // ),
-//               ]),
-//             ),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
-
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -144,8 +53,6 @@ class _FirstScreenState extends State<FirstScreen> {
                               Text(users[index].date_Dep),
                               Text(users[index].adresse_Dep),
                               Text(users[index].condTransp),
-                              Text(users[index].create_at),
-                              Text(users[index].update_at),
                             ],
                           ),
                         );

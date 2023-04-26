@@ -12,8 +12,8 @@ class Mission {
   String date_Dep;
   String adresse_Dep;
   String condTransp;
-  String create_at;
-  String update_at;
+  // String create_at;
+  // String update_at;
 
   Mission({
     required this.id,
@@ -24,8 +24,8 @@ class Mission {
     required this.date_Dep,
     required this.adresse_Dep,
     required this.condTransp,
-    required this.create_at,
-    required this.update_at,
+    // required this.create_at,
+    // required this.update_at,
   });
 
   factory Mission.fromJson(Map<String, dynamic> json) {
@@ -38,13 +38,13 @@ class Mission {
       date_Dep: json['date_Dep'].toString(),
       adresse_Dep: json['adresse_Dep'].toString(),
       condTransp: json['condTransp'].toString(),
-      create_at: json['create_at'].toString(),
-      update_at: json['update_at'].toString(),
+      // create_at: json['create_at'].toString(),
+      // update_at: json['update_at'].toString(),
     );
   }
 }
 
-final String apiUrl = "http://192.168.1.134:8000/api/mission";
+final String apiUrl = "http://192.168.1.22:8000/api/mission";
 
 Future<List<Mission>> getAllMission() async {
   final response = await http.get(Uri.parse(apiUrl));
