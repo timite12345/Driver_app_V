@@ -1,14 +1,12 @@
-import 'package:driver_app/MenuPage.dart';
+import 'package:driver_app/ChauffeurListes.dart';
+import 'package:driver_app/ProfilePage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:driver_app/LoginPage1.dart';
 import 'package:flutter/material.dart';
 import 'GpsPage.dart';
-import 'Mission.dart';
-import 'ProfilePage.dart';
-import 'SocialPage.dart';
-import 'animation.dart';
+import 'HopitalListes.dart';
+import 'MissionListes.dart';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'main.dart';
@@ -27,25 +25,53 @@ class _ChoixPageState extends State<ChoixPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Menu'),
+        title: const Text('Menu'),
         backgroundColor: Colors.green[300],
         elevation: 0,
       ),
       backgroundColor: Colors.green[100],
       //Commence ici les trois traits sur la nav Bar
       drawer: Drawer(
-        child: ListView(children: [ListTile()]),
+        child: ListView(children: [
+          Row(
+            children: [
+              Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 50)),
+              TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ProfilePage()));
+                  },
+                  child: Text(
+                    'Profile',
+                    style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                  )),
+            ],
+          )
+        ]),
       ),
       body: Container(
-        padding: EdgeInsets.symmetric(vertical: 80),
+        padding: const EdgeInsets.symmetric(vertical: 80),
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: GridView(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              mainAxisSpacing: 50,
+              crossAxisSpacing: 10,
+            ),
             children: [
               InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => FirstScreen()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const FirstScreen()));
                 },
                 child: Container(
                   decoration: BoxDecoration(
@@ -54,7 +80,7 @@ class _ChoixPageState extends State<ChoixPage> {
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Icon(
                         Icons.car_repair,
                         size: 50,
@@ -83,7 +109,7 @@ class _ChoixPageState extends State<ChoixPage> {
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Icon(
                         Icons.search,
                         size: 50,
@@ -102,8 +128,10 @@ class _ChoixPageState extends State<ChoixPage> {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SocialPage()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ChauffeurListe()));
                 },
                 child: Container(
                   decoration: BoxDecoration(
@@ -112,7 +140,7 @@ class _ChoixPageState extends State<ChoixPage> {
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Icon(
                         Icons.car_rental,
                         size: 50,
@@ -132,7 +160,9 @@ class _ChoixPageState extends State<ChoixPage> {
               InkWell(
                 onTap: () {
                   Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => Menu()));
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HopitalListe()));
                 },
                 child: Container(
                   decoration: BoxDecoration(
@@ -141,7 +171,7 @@ class _ChoixPageState extends State<ChoixPage> {
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Icon(
                         Icons.local_hospital_rounded,
                         size: 50,
@@ -158,77 +188,7 @@ class _ChoixPageState extends State<ChoixPage> {
                   ),
                 ),
               ),
-              // Column(
-              //   children: [
-              //     ElevatedButton(
-              //       style: ElevatedButton.styleFrom(
-              //           primary: Colors.blueGrey,
-              //           shape: const StadiumBorder(),
-              //           padding:
-              //               EdgeInsets.symmetric(vertical: 10, horizontal: 30)),
-              //       child: Row(
-              //         mainAxisAlignment: MainAxisAlignment.center,
-
-              //         // ignore: prefer_const_literals_to_create_immutables
-              //         children: [
-              //           const SizedBox(
-              //             height: 30,
-              //           ),
-              //           const Text(
-              //             "Se Deconnecter",
-              //             style: TextStyle(
-              //               fontSize: 15,
-              //               fontWeight: FontWeight.bold,
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //       onPressed: () async {
-              //         try {
-              //           await _auth.signOut().then((value) {
-              //             Navigator.push(
-              //               context,
-              //               MaterialPageRoute(
-              //                 builder: (context) => HommePage(),
-              //               ),
-              //             );
-              //           });
-              //         } on FirebaseAuthException catch (e) {}
-              //       },
-              //     ),
-              //   ],
-              // ),
-              // GestureDetector(
-              //   onTap: () async {
-              //     try {
-              //       await _auth.signOut().then((value) {
-              //         Navigator.push(
-              //           context,
-              //           MaterialPageRoute(
-              //             builder: (context) => HommePage(),
-              //           ),
-              //         );
-              //       });
-              //     } on FirebaseAuthException catch (e) {}
-              //   },
-              //   child: Container(
-              //       color: Colors.yellow.shade600,
-
-              //       padding: const EdgeInsets.all(8),
-              //       // Change button text when light changes state.
-              //       child: Text("Deconnecter",
-              //           style: GoogleFonts.ubuntu(
-              //             color: Colors.red,
-              //             fontSize: 20,
-              //             fontWeight: FontWeight.bold,
-              //           ))),
-              // ),
             ],
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              mainAxisSpacing: 50,
-              crossAxisSpacing: 10,
-            ),
           ),
         ),
       ),

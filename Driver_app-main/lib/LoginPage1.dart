@@ -128,7 +128,7 @@ class _LoginState extends State<HommePage> {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                          builder: (context) => ChoixPage(),
+                                          builder: (context) => SocialPage(),
                                         ),
                                       );
                                     });

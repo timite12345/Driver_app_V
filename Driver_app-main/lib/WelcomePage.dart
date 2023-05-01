@@ -1,3 +1,5 @@
+import 'package:driver_app/ConnexionPage.dart';
+import 'package:driver_app/LoginPage1.dart';
 import 'package:flutter/material.dart';
 import 'package:driver_app/main.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -93,7 +95,7 @@ class WelcomePage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SocialPage(),
+                              builder: (context) => HommePage(),
                             ),
                           );
                         },
