@@ -81,7 +81,7 @@ class WelcomePage extends StatelessWidget {
                               width: 10,
                             ),
                             const Text(
-                              "Get STARTED",
+                              "Commencer",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,

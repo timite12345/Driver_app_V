@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:driver_app/LoginPage1.dart';
 import 'package:flutter/material.dart';
 import 'GpsPage.dart';
+import 'Mission.dart';
 import 'ProfilePage.dart';
 import 'SocialPage.dart';
 import 'animation.dart';
@@ -44,7 +45,7 @@ class _ChoixPageState extends State<ChoixPage> {
               InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => ProfilePage()));
+                      MaterialPageRoute(builder: (context) => FirstScreen()));
                 },
                 child: Container(
                   decoration: BoxDecoration(
@@ -55,12 +56,12 @@ class _ChoixPageState extends State<ChoixPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(
-                        Icons.home,
+                        Icons.car_repair,
                         size: 50,
-                        color: Colors.black,
+                        color: Colors.orangeAccent,
                       ),
                       Text(
-                        "Home",
+                        "Missions",
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 30,
@@ -78,7 +79,7 @@ class _ChoixPageState extends State<ChoixPage> {
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Colors.yellow,
+                    color: Colors.white,
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -86,11 +87,14 @@ class _ChoixPageState extends State<ChoixPage> {
                       Icon(
                         Icons.search,
                         size: 50,
-                        color: Colors.white,
+                        color: Colors.green,
                       ),
                       Text(
                         "Maps",
-                        style: TextStyle(color: Colors.white, fontSize: 30),
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold),
                       )
                     ],
                   ),
@@ -104,19 +108,22 @@ class _ChoixPageState extends State<ChoixPage> {
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Colors.blue.shade300,
+                    color: Colors.white,
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(
-                        Icons.local_hospital,
+                        Icons.car_rental,
                         size: 50,
-                        color: Colors.white,
+                        color: Colors.red,
                       ),
                       Text(
                         "Ambulances",
-                        style: TextStyle(color: Colors.white, fontSize: 25),
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold),
                       )
                     ],
                   ),
@@ -130,7 +137,7 @@ class _ChoixPageState extends State<ChoixPage> {
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: Colors.indigo,
+                    color: Colors.white,
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -138,11 +145,14 @@ class _ChoixPageState extends State<ChoixPage> {
                       Icon(
                         Icons.local_hospital_rounded,
                         size: 50,
-                        color: Colors.white,
+                        color: Colors.blue,
                       ),
                       Text(
-                        "Hospital",
-                        style: TextStyle(color: Colors.white, fontSize: 30),
+                        "Hopitaux",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold),
                       )
                     ],
                   ),

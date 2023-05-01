@@ -45,7 +45,7 @@ class SocialPage extends StatelessWidget {
                           child: Column(
                             children: [
                               Text(
-                                "Se Connecter",
+                                "Ordres de Mission",
                                 style: TextStyle(
                                   fontSize: 50,
                                   fontWeight: FontWeight.bold,
@@ -53,9 +53,9 @@ class SocialPage extends StatelessWidget {
                                   fontStyle: FontStyle.italic,
                                 ),
                               ),
-                              SizedBox(height: 10),
+                              SizedBox(height: 0),
                               Text(
-                                "Connectez Vous en Tant que :",
+                                "Laissez-nous vous guider :",
                                 textAlign: TextAlign.center,
                                 style: GoogleFonts.poppins(
                                   color: Colors.grey,
@@ -78,7 +78,7 @@ class SocialPage extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => HommePage(),
+                                    builder: (context) => ChoixPage(),
                                   ),
                                 );
                               },
@@ -91,42 +91,13 @@ class SocialPage extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   const Icon(
-                                    Icons.person,
+                                    Icons.car_repair_outlined,
                                   ),
                                   const SizedBox(width: 10),
                                   Text(
-                                    "Patient",
+                                    "Nouvelles Missions",
                                     style: GoogleFonts.poppins(
                                       // color : Colors.black ,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              )),
-                          SizedBox(height: 30),
-                          ElevatedButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => HommePage(),
-                                  ),
-                                );
-                              },
-                              style: ElevatedButton.styleFrom(
-                                shape: StadiumBorder(),
-                                primary: Colors.blueGrey,
-                                padding: const EdgeInsets.all(13),
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(Icons.person),
-                                  SizedBox(width: 10),
-                                  Text(
-                                    "Medecin",
-                                    style: GoogleFonts.poppins(
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -145,16 +116,48 @@ class SocialPage extends StatelessWidget {
                               },
                               style: ElevatedButton.styleFrom(
                                 shape: StadiumBorder(),
+                                primary: Colors.blueGrey,
+                                padding: const EdgeInsets.all(13),
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(Icons.car_repair_sharp),
+                                  SizedBox(width: 10),
+                                  Text(
+                                    "Historiques Missions",
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              )),
+                          SizedBox(height: 30),
+                          ElevatedButton(
+                              onPressed: () {
+                                // Navigator.push(
+                                //   context,
+                                //   MaterialPageRoute(
+                                //     builder: (context) => FirstScreen(),
+                                //   ),
+                                // );
+                              },
+                              style: ElevatedButton.styleFrom(
+                                shape: StadiumBorder(),
                                 primary: Colors.blueAccent,
                                 padding: const EdgeInsets.all(15),
                               ),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(Icons.person),
+                                  Icon(
+                                    Icons.add_alert_outlined,
+                                    color: Colors.red,
+                                  ),
                                   SizedBox(width: 10),
                                   Text(
-                                    "Chauffeur",
+                                    "Envoyer Alertes",
                                     style: GoogleFonts.poppins(
                                       color: Colors.white,
                                       fontSize: 18,
