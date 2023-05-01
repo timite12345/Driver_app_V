@@ -225,35 +225,35 @@ class _EditerProfilesPageState extends State<EditerProfilesPage> {
                   SizedBox(
                     height: 25,
                   ),
-                  texfield(
-                    "Nom Medecin",
-                    "Timite",
-                    false,
-                  ),
-                  SizedBox(
-                    height: 25,
-                  ),
-                  texfield(
-                    "Contact",
-                    "00216 52270118",
-                    false,
-                  ),
-                  SizedBox(
-                    height: 25,
-                  ),
+                  // texfield(
+                  //   "Nom Medecin",
+                  //   "Timite",
+                  //   false,
+                  // ),
+                  // SizedBox(
+                  //   height: 25,
+                  // ),
+                  // texfield(
+                  //   "Contact",
+                  //   "00216 52270118",
+                  //   false,
+                  // ),
+                  // SizedBox(
+                  //   height: 25,
+                  // ),
                   texfield(
                     "Adresse",
-                    "Monastir",
+                    "Yopougon",
                     false,
                   ),
-                  SizedBox(
-                    height: 25,
-                  ),
-                  texfield(
-                    "Hopital de traitement",
-                    "Fatouma Bourguiba",
-                    false,
-                  ),
+                  // SizedBox(
+                  //   height: 25,
+                  // ),
+                  // texfield(
+                  //   "Hopital de traitement",
+                  //   "Fatouma Bourguiba",
+                  //   false,
+                  // ),
                   SizedBox(
                     height: 25,
                   ),
@@ -276,7 +276,7 @@ class _EditerProfilesPageState extends State<EditerProfilesPage> {
                         );
                       },
                       child: Container(
-                        margin: const EdgeInsets.only(left: 20, right: 40),
+                        margin: const EdgeInsets.only(left: 20, right: 20),
                         decoration: BoxDecoration(
                           boxShadow: const [
                             BoxShadow(
