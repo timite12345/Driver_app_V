@@ -12,10 +12,11 @@ class Loading extends StatelessWidget {
 
 Loadind_popup(context) {
   return showDialog(
+      //menu deroulant pour la photo de profile
       barrierDismissible: false,
       context: context,
       builder: (context) {
-        return Loading();
+        return Loading(); //appel de la classe Loading
       });
 }
 

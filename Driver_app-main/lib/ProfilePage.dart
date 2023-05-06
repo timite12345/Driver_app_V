@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable, no_leading_underscores_for_local_identifiers, prefer_const_constructors, sort_child_properties_last, unused_catch_clause, empty_catches
+
 import 'package:driver_app/LoginPage1.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +36,6 @@ class _ProfilePageState extends State<ProfilePage> {
         elevation: 0,
         backgroundColor: Colors.blue.shade200,
         leading: const SizedBox(),
-        // On Android it's false by default
         centerTitle: true,
         title: const Text("Profile"),
         actions: <Widget>[
@@ -58,7 +59,6 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
         ],
       ),
-      // bottomNavigationBar: MyBottomNavBar(),
       body: SingleChildScrollView(
           child: Column(children: [
         SizedBox(
@@ -73,7 +73,6 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
             Center(
               child: Column(
-                // mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   Stack(
                     children: [
@@ -94,6 +93,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         ),
                       ),
                       Positioned(
+                          //menu deroulant pour changer photo dans editer profile
                           top: 120,
                           left: 60,
                           child: RawMaterialButton(
@@ -228,6 +228,7 @@ class _ProfilePageState extends State<ProfilePage> {
         SizedBox(
           height: 20,
         ),
+        // Gestion de profile dans la page profile
         Container(
           margin: const EdgeInsets.only(
             left: 20,

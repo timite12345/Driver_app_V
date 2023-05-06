@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, prefer_const_constructors
+
 import 'package:driver_app/GpsPage.dart';
 import 'package:flutter/material.dart';
 import 'API/getAllHopital.dart';
@@ -7,6 +9,7 @@ class HopitalListe extends StatefulWidget {
   const HopitalListe({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _HopitalListe createState() => _HopitalListe();
 }
 

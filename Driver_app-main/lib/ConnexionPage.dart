@@ -1,27 +1,27 @@
-// ignore_for_file: unnecessary_const
-
-import 'dart:ui';
+// ignore: file_names
+// ignore_for_file: unused_field, prefer_typing_uninitialized_variables, unused_element, unused_local_variable, unnecessary_const
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'LoginPage1.dart';
 import 'ProfilePage.dart';
-import 'main.dart';
 
 class ConnexionPage extends StatelessWidget {
   const ConnexionPage({Key? key}) : super(key: key);
 
+  // ignore: library_private_types_in_public_api
   _LoginState createState() => _LoginState();
 
   @override
-  Widget build(BuildContext context) => ProfilePage();
+  Widget build(BuildContext context) => const ProfilePage();
 }
 
 //////
 class _LoginState extends State<ProfilePage> {
-  bool _isLoading = false;
+  final bool _isLoading = false;
   final _formKey = GlobalKey<FormState>();
+  // ignore: prefer_typing_uninitialized_variables
   var email;
   var password;
   final _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -30,14 +30,12 @@ class _LoginState extends State<ProfilePage> {
       content: Text(msg),
       action: SnackBarAction(
         label: 'Close',
-        onPressed: () {
-          // Some code to undo the change!
-        },
+        onPressed: () {},
       ),
     );
-    // _scaffoldKey.currentState.showSnackBar(snackBar);
   }
 
+  @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     var textStyle = const TextStyle(
@@ -105,7 +103,7 @@ class _LoginState extends State<ProfilePage> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => HommePage(),
+                                  builder: (context) => const HommePage(),
                                 ),
                               );
                             },
@@ -159,7 +157,7 @@ class _LoginState extends State<ProfilePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HommePage(),
+                            builder: (context) => const HommePage(),
                           ),
                         );
                       },
@@ -212,7 +210,7 @@ class _LoginState extends State<ProfilePage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => HommePage(),
+                              builder: (context) => const HommePage(),
                             ));
                       },
                       child: Container(
@@ -276,7 +274,7 @@ class _LoginState extends State<ProfilePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HommePage(),
+                            builder: (context) => const HommePage(),
                           ),
                         );
                       },
@@ -327,6 +325,7 @@ class _LoginState extends State<ProfilePage> {
 }
 
 class DrawClip extends CustomClipper<Path> {
+  @override
   Path getClip(Size size) {
     Path path = Path();
     path.lineTo(0, size.height * 0.80);
@@ -338,12 +337,12 @@ class DrawClip extends CustomClipper<Path> {
 
   @override
   bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
-    // TODO: implement shouldReclip
     return true;
   }
 }
 
 class DrawClip2 extends CustomClipper<Path> {
+  @override
   Path getClip(Size size) {
     Path path = Path();
     path.lineTo(0, size.height * 0.80);
@@ -355,7 +354,6 @@ class DrawClip2 extends CustomClipper<Path> {
 
   @override
   bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
-    // TODO: implement shouldReclip
     return true;
   }
 }

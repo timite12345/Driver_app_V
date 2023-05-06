@@ -1,15 +1,12 @@
+// ignore_for_file: unused_field, library_private_types_in_public_api
+
 import 'package:driver_app/ChauffeurListes.dart';
 import 'package:driver_app/ProfilePage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'GpsPage.dart';
 import 'HopitalListes.dart';
 import 'MissionListes.dart';
-
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-import 'main.dart';
 
 class ChoixPage extends StatefulWidget {
   const ChoixPage({Key? key}) : super(key: key);
@@ -35,7 +32,7 @@ class _ChoixPageState extends State<ChoixPage> {
         child: ListView(children: [
           Row(
             children: [
-              Padding(
+              const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 30, vertical: 50)),
               TextButton(
                   onPressed: () {
@@ -44,7 +41,7 @@ class _ChoixPageState extends State<ChoixPage> {
                         MaterialPageRoute(
                             builder: (context) => const ProfilePage()));
                   },
-                  child: Text(
+                  child: const Text(
                     'Profile',
                     style: TextStyle(
                         fontSize: 30,

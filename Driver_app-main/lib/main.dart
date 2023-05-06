@@ -1,13 +1,10 @@
+// ignore_for_file: unused_import, constant_identifier_names, prefer_const_constructors, library_private_types_in_public_api
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:driver_app/WelcomePage.dart';
-
-// import 'package:flutter/material.dart';
-// import 'package:tutorial_app/screen/login.dart';
-// import 'package:tutorial_app/screen/home.dart';
-//import 'package:projet_flutter/SocialPage.dart';
 
 const d_red = Color(0xFFE9717D);
 const Val = true;
@@ -34,6 +31,8 @@ class MyApp extends StatelessWidget {
 }
 
 class CheckAuth extends StatefulWidget {
+  const CheckAuth({super.key});
+
   @override
   _CheckAuthState createState() => _CheckAuthState();
 }
@@ -56,6 +55,7 @@ class _CheckAuthState extends State<CheckAuth> {
     }
   }
 
+  @override
   Widget build(BuildContext context) {
     Widget child;
     if (isAuth) {

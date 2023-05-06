@@ -5,7 +5,7 @@ import 'package:driver_app/main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'SocialPage.dart';
-import 'animation.dart';
+import 'Delay_animation.dart';
 
 class WelcomePage extends StatelessWidget {
   //get vertical => null;

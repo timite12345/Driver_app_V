@@ -1,6 +1,7 @@
+// ignore_for_file: file_names, unused_local_variable, sort_child_properties_last
+
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:image_picker/image_picker.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -8,6 +9,8 @@ import 'LoginPage1.dart';
 import 'ProfilePage.dart';
 
 class EditerProfilesPage extends StatefulWidget {
+  const EditerProfilesPage({super.key});
+
   @override
   State<EditerProfilesPage> createState() => _EditerProfilesPageState();
 }
@@ -190,7 +193,7 @@ class _EditerProfilesPageState extends State<EditerProfilesPage> {
               ]),
             ),
             Container(
-              margin: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(20),
               child: Column(
                 children: [
                   texfield(
@@ -198,7 +201,7 @@ class _EditerProfilesPageState extends State<EditerProfilesPage> {
                     "Timite",
                     false,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 25,
                   ),
                   texfield(
@@ -206,7 +209,7 @@ class _EditerProfilesPageState extends State<EditerProfilesPage> {
                     "Alassane",
                     false,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 25,
                   ),
                   texfield(
@@ -214,7 +217,7 @@ class _EditerProfilesPageState extends State<EditerProfilesPage> {
                     "alassanekoudouss@gmail.com",
                     false,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 25,
                   ),
                   texfield(
@@ -222,47 +225,18 @@ class _EditerProfilesPageState extends State<EditerProfilesPage> {
                     "Timite",
                     true,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 25,
                   ),
-                  // texfield(
-                  //   "Nom Medecin",
-                  //   "Timite",
-                  //   false,
-                  // ),
-                  // SizedBox(
-                  //   height: 25,
-                  // ),
-                  // texfield(
-                  //   "Contact",
-                  //   "00216 52270118",
-                  //   false,
-                  // ),
-                  // SizedBox(
-                  //   height: 25,
-                  // ),
                   texfield(
                     "Adresse",
                     "Yopougon",
                     false,
                   ),
-                  // SizedBox(
-                  //   height: 25,
-                  // ),
-                  // texfield(
-                  //   "Hopital de traitement",
-                  //   "Fatouma Bourguiba",
-                  //   false,
-                  // ),
-                  SizedBox(
-                    height: 25,
-                  ),
                 ],
               ),
             ),
-            // Padding(padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10,)),
             Row(
-              // mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Stack(
                   children: [
@@ -271,7 +245,7 @@ class _EditerProfilesPageState extends State<EditerProfilesPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HommePage(),
+                            builder: (context) => const HommePage(),
                           ),
                         );
                       },
@@ -348,7 +322,7 @@ class _EditerProfilesPageState extends State<EditerProfilesPage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HommePage(),
+                            builder: (context) => const HommePage(),
                           ));
                     },
                     child: Padding(
@@ -375,7 +349,6 @@ class _EditerProfilesPageState extends State<EditerProfilesPage> {
           ],
         ),
       ),
-      // bottomNavigationBar: MyBottomNavBar(),
     );
   }
 

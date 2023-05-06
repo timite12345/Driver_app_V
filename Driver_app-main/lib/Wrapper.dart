@@ -1,3 +1,5 @@
+// ignore_for_file: duplicate_import, implementation_imports, unused_import, unnecessary_null_comparison, prefer_const_constructors
+
 import 'package:driver_app/LoginPage1.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_auth/firebase_auth.dart';

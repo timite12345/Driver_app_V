@@ -8,7 +8,7 @@ import 'ConnexionPage.dart';
 import 'LoginPage1.dart';
 import 'MissionListes.dart';
 import 'SocialPage.dart';
-import 'animation.dart';
+import 'Delay_animation.dart';
 import 'package:driver_app/Variable.dart';
 import 'package:driver_app/SocialPage.dart';
 import 'package:driver_app/LoginPage1.dart';

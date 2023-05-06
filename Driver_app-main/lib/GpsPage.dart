@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api, avoid_print, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_google_places_hoc081098/flutter_google_places_hoc081098.dart';
 import 'package:google_api_headers/google_api_headers.dart';
@@ -5,30 +7,31 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_webservice/places.dart';
 
 class Home extends StatefulWidget {
+  const Home({super.key});
+
   @override
   _HomeState createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
-  String googleApikey = "AIzaSyBKAz1cjpdrP9nedtg_kmbBTGy1k_PmXX4";
+  String googleApikey =
+      "AIzaSyBKAz1cjpdrP9nedtg_kmbBTGy1k_PmXX4"; //la clé google maps
   GoogleMapController? mapController; //contrller for Google map
   CameraPosition? cameraPosition;
-  LatLng startLocation = LatLng(5.316667, -4.033333);
+  LatLng startLocation = const LatLng(5.316667, -4.033333);
   String location = "Search Location";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Maps pour vous Guider"),
+          title: const Text("Maps pour vous Guider"),
           backgroundColor: Colors.deepPurpleAccent,
         ),
         body: Stack(children: [
           GoogleMap(
-            //Map widget from google_maps_flutter package
             zoomGesturesEnabled: true, //enable Zoom in, out on map
             initialCameraPosition: CameraPosition(
-              //innital position in map
               target: startLocation, //initial position
               zoom: 14.0, //initial zoom level
             ),
@@ -41,7 +44,7 @@ class _HomeState extends State<Home> {
             },
           ),
 
-          //search autoconplete input
+          //la barre de recherche autocomplete pour les positions
           Positioned(
               //search input bar
               top: 10,

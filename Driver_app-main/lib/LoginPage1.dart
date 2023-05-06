@@ -1,28 +1,20 @@
-// ignore_for_file: unnecessary_const, avoid_print
+// ignore_for_file: unnecessary_const, avoid_print, unused_field, unused_element, unused_local_variable, prefer_const_constructors
 
-import 'dart:ui';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:driver_app/SocialPage.dart';
-//import 'package:driver_app/auth.dart';
-import 'package:driver_app/function.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-import 'ChoixPage.dart';
-import 'ProfilePage.dart';
 
 class HommePage extends StatefulWidget {
-  HommePage({Key? key}) : super(key: key);
+  const HommePage({Key? key}) : super(key: key);
   @override
+  // ignore: library_private_types_in_public_api
   _LoginState createState() => _LoginState();
 }
 
 //////
 class _LoginState extends State<HommePage> {
-  bool _isLoading = false;
+  final bool _isLoading = false;
   final _formKey = GlobalKey<FormState>();
   bool hasPawdError = false;
   String passwordError = "";
@@ -38,14 +30,12 @@ class _LoginState extends State<HommePage> {
       content: Text(msg),
       action: SnackBarAction(
         label: 'Close',
-        onPressed: () {
-          // Some code to undo the change!
-        },
+        onPressed: () {},
       ),
     );
-    // _scaffoldKey.currentState.showSnackBar(snackBar);
   }
 
+  @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     var textStyle = const TextStyle(
@@ -113,8 +103,6 @@ class _LoginState extends State<HommePage> {
                           ),
                           ElevatedButton(
                               onPressed: () async {
-                                //  Loadind_popup(context);
-
                                 if (_formKey.currentState!.validate()) {
                                   try {
                                     print(_emailController.text);
@@ -151,7 +139,6 @@ class _LoginState extends State<HommePage> {
                                     }
                                   } finally {
                                     if (!_formKey.currentState!.validate()) {
-                                      // Navigator.pop(dialogContexte);
                                       setState(() {
                                         hasEmailError = false;
                                         hasPawdError = false;
@@ -182,163 +169,17 @@ class _LoginState extends State<HommePage> {
                                   )),
                                 ),
                               )),
-                          Text("Forget your password",
-                              style: GoogleFonts.ubuntu(
-                                color: Colors.blueGrey,
-                                fontWeight: FontWeight.bold,
-                              ))
                         ],
                       ),
                     ),
                   ),
                 ],
               ),
-              Text("Or Connect with ",
-                  style: GoogleFonts.ubuntu(
-                    color: Colors.blueGrey,
-                    fontWeight: FontWeight.bold,
-                  )),
               Padding(
                 padding: const EdgeInsets.symmetric(
                   vertical: 5,
                   horizontal: 0,
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => HommePage(),
-                          ),
-                        );
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.blue,
-                              offset: Offset(3.0, 3.0),
-                              blurRadius: 15.0,
-                              spreadRadius: 1.0,
-                            ),
-                            BoxShadow(
-                              color: Colors.white,
-                              offset: Offset(-3.0, -3.0),
-                              blurRadius: 15.0,
-                              spreadRadius: 1.0,
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(30),
-                          color: Colors.blue,
-                        ),
-                        height: 40,
-                        width: 120,
-                        child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 5,
-                            ),
-                            child: Row(
-                              children: [
-                                const FaIcon(FontAwesomeIcons.facebook,
-                                    color: Colors.white),
-                                const SizedBox(
-                                  width: 5,
-                                ),
-                                Text("Facebook",
-                                    style: GoogleFonts.ubuntu(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                    ))
-                              ],
-                            )),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 50,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => HommePage(),
-                            ));
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.blue,
-                              offset: Offset(3.0, 3.0),
-                              blurRadius: 15.0,
-                              spreadRadius: 1.0,
-                            ),
-                            BoxShadow(
-                              color: Colors.white,
-                              offset: Offset(-3.0, -3.0),
-                              blurRadius: 15.0,
-                              spreadRadius: 1.0,
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(30),
-                          color: Colors.orange,
-                        ),
-                        height: 40,
-                        width: 140,
-                        child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 10,
-                            ),
-                            child: Row(
-                              children: [
-                                const FaIcon(FontAwesomeIcons.facebook,
-                                    color: Colors.white),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Text("Autres",
-                                    style: GoogleFonts.ubuntu(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                    )),
-                              ],
-                            )),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("Vous n'avez pas de Compte ?",
-                      style: GoogleFonts.ubuntu(
-                        color: Colors.black,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      )),
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => SocialPage(),
-                          ),
-                        );
-                      },
-                      child: Text("Creez Un Compte",
-                          style: GoogleFonts.ubuntu(
-                            color: Colors.red,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                          ))),
-                ],
               )
             ],
           ),
